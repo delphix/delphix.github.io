@@ -1,6 +1,9 @@
 repository: delphix/delphix.github.io
 
 featured:
+  - name: "Automation"
+    description: "Tools to help integrate Delphix into your automation toolchains"
+    repos: [ "delphixpy-examples" ]
   - name: "Management"
     description: "Tools for managing Delphix deployments."
     repos: [ "dxtoolkit", "dxanalyze", "infra-readiness" ]
