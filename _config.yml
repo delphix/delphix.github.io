@@ -12,4 +12,4 @@ featured:
     repos: [ "dxhooks" ]
   - name: "Forks" 
     description: "Forks of external projects where Delphix is a primary contributor."
-    repos: [ "delphix-os" ]
+    repos: [ "zfs", "spl", "delphix-os" ]
