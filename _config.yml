@@ -10,6 +10,9 @@ featured:
   - name: "Virtualization"
     description: "Tools to help virtualize data and operate VDBs."
     repos: [ "dxhooks" ]
+  - name: "Masking"
+    description: "Tools to help mask data and operate masking deployments."
+    repos: [ "masking-initializer" ]
   - name: "Forks" 
     description: "Forks of external projects where Delphix is a primary contributor."
     repos: [ "zfs", "spl", "delphix-os" ]
