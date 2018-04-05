@@ -98,12 +98,6 @@
               <p>{{featured.description}}</p>
 
               {% assign rows = featured.repos.size | divided_by: 3.0 | ceil %}
-              {% if rows > 1 %}
-              <div class="controls-left">
-                  <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-                  <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-              </div>
-              {% endif %}
 
             </div>
 
@@ -153,8 +147,17 @@
 
                 {% endfor %}
               </div>
+              {% if rows > 1 %}
+              <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+              {% endif %}
             </div>
-
           </div>
         {% endfor %}
       </div>
