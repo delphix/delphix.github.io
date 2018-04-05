@@ -3,7 +3,7 @@ repository: delphix/delphix.github.io
 featured:
   - name: "Automation"
     description: "Tools to help integrate Delphix into your automation toolchain"
-    repos: [ "ansible-target-host", "delphixpy-examples", "puppet" ]
+    repos: [ "ansible-target-host", "chef", "delphixpy-examples", "puppet"]
   - name: "Management"
     description: "Tools for managing Delphix deployments."
     repos: [ "dxtoolkit", "dxanalyze", "infra-readiness" ]
