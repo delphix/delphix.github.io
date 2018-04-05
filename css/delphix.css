@@ -78,7 +78,7 @@
 }
 
 @media (min-width: 768px) {
-    
+
   .container {
     max-width: 100%;
     margin-left: 20px;
@@ -93,7 +93,7 @@
 }
 
 @media (min-width: 1024px) {
-    
+
   .container {
     max-width: 100%;
     margin-left: 65px;
@@ -108,7 +108,7 @@
 }
 
 @media (min-width: 1280px) {
-    
+
   .container {
     max-width: 1176px;
     margin-left: auto;
@@ -362,6 +362,7 @@ body {
   -ms-flex-align: start;
   align-items: flex-start;
   margin: 0;
+  height: 450
 }
 
 .dx-main-content .card-deck .card {
@@ -499,4 +500,16 @@ body {
 
 .dx-c {
   background-color: #555555;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 2%;
+}
+
+.carousel-control-prev-icon {
+    background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230066ff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
+}
+
+.carousel-control-next-icon {
+    background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230066ff' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
 }
