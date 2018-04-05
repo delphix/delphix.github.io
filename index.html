@@ -91,47 +91,73 @@
       <!-- Featured repos -->
       <div class="tab-pane active" id="featured" role="tabpanel">
         {% for featured in site.featured %}
-          <div class="row pb-md-4">
+          <div id="multi-item-example" class="row pb-md-4 carousel slide carousel-multi-item" data-ride="carousel">
+
             <div class="col-md-3 order-md-1 text-center text-md-left align-self-start">
               <h3>{{featured.name}}</h3>
               <p>{{featured.description}}</p>
+
+              {% assign rows = featured.repos.size | divided_by: 3.0 | ceil %}
+              {% if rows > 1 %}
+              <div class="controls-left">
+                  <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                  <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+              </div>
+              {% endif %}
+
             </div>
+
             <div class="col-12 col-md-9 order-md-2">
-              <div class="card-deck">
-                {% for repo in site.github.public_repositories %}
-                  {% if featured.repos contains repo.name %}
-                    <div class="card">
-                      <div class="card-header text-center">
-                          <img src="/img/icons/{{ repo.name }}.png" height=64px onerror="this.onerror=null; this.src='/img/icons/unknown.png';">
-                      </div>
-                      <div class="card-body">
-                        <h4 class="card-title"><a href="{{ repo.html_url }}">{{ repo.name }}</a></h4>
-                        <p class="card-text">{{ repo.description }}</p>
-                      </div>
-                      <div class="card-footer">
-                        <div class="row d-flex align-items-center">
-                          <div class="col-6 text-left">
-                            <i class="fa fa-star" aria-hidden="true"></i> {{ repo.stargazers_count }}
-                            <i class="fa fa-code-fork pl-md-2" aria-hidden="true"></i> {{ repo.forks_count }}
-                          </div>
-                          <div class="col-6 text-right">
-                            {% if repo.language %}
-                              <span class="rounded text-uppercase dx-language small dx-{{ repo.language | downcase | replace: ' ', '-' }}">
-                                {{ repo.language }}
-                              </span>
-                            {% endif %}
+              <div class="carousel-inner" role="listbox">
+                {% for i in (1..rows) %}
+
+                  {% assign offset = forloop.index0 | times: 3 %}
+                  {% assign repo_array = "" | split: ',' %}
+
+                  <div class="col-12 carousel-item {% if offset == 0 %}active{% endif %}">
+                    {% for repo in site.github.public_repositories %}
+                      {% if featured.repos contains repo.name %}
+                        {% assign repo_array = repo_array | push: repo %}
+                      {% endif %}
+                    {% endfor %}
+                    <div class="card-deck">
+                    {% for repo in repo_array limit:3 offset:offset %}
+                      <div class="card">
+                        <div class="card-header text-center">
+                            <img src="/img/icons/{{ repo.name }}.png" height=64px onerror="this.onerror=null; this.src='/img/icons/unknown.png';">
+                        </div>
+                        <div class="card-body">
+                          <h4 class="card-title"><a href="{{ repo.html_url }}">{{ repo.name }}</a></h4>
+                          <p class="card-text">{{ repo.description }}</p>
+                        </div>
+                        <div class="card-footer">
+                          <div class="row d-flex align-items-center">
+                            <div class="col-6 text-left">
+                              <i class="fa fa-star" aria-hidden="true"></i> {{ repo.stargazers_count }}
+                              <i class="fa fa-code-fork pl-md-2" aria-hidden="true"></i> {{ repo.forks_count }}
+                            </div>
+                            <div class="col-6 text-right">
+                              {% if repo.language %}
+                                <span class="rounded text-uppercase dx-language small dx-{{ repo.language | downcase | replace: ' ', '-' }}">
+                                  {{ repo.language }}
+                                </span>
+                              {% endif %}
+                            </div>
                           </div>
                         </div>
                       </div>
+                    {% endfor %}
                     </div>
-                  {% endif %}
+
+                  </div>
+
                 {% endfor %}
               </div>
             </div>
+
           </div>
         {% endfor %}
       </div>
-
       <!-- All repos -->
       <div class="tab-pane" id="all" role="tabpanel">
         <div class="dx-list-header">
