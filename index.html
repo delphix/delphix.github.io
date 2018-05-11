@@ -1,10 +1,9 @@
 ---
-# Empty front matter
+layout: default
 ---
 <!--
   Copyright (c) 2018 by Delphix. All rights reserved.
 -->
-{% include header.html %}
 <div class="dx-masthead">
   <div class="container">
     <div class="row align-items-center">
@@ -29,6 +28,9 @@
     </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="tab" href="#all" role="tab">All Repositories</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#materials" role="materials">Materials</a>
     </li>
   </ul>
 
@@ -106,6 +108,7 @@
         </div>
       {% endfor %}
     </div>
+
     <!-- All repos -->
     <div class="tab-pane" id="all" role="tabpanel">
       <div class="dx-list-header">
@@ -145,6 +148,31 @@
         {% endfor %}
       </div>
     </div>
+
+    <!-- Materials -->
+    <div class="tab-pane" id="materials" role="tabpanel">
+      <div class="row pb-md-4">
+
+        <div class="col-md-3 order-md-1 text-center text-md-left align-self-start">
+          <p>Documentation and materials related to Delphix open source communities, including
+             policies, procedures, and community guidelines.</p>
+        </div>
+
+        <div class="col-12 col-md-9 order-md-2">
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-header text-center">
+                  <img src="/img/icons/code-of-conduct.png" height=64px>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title"><a href="code-of-conduct.html">Code of Conduct</a></h4>
+                <p class="card-text">We expect community members to abide by our core values in order to foster a diverse, inclusive, and welcoming environment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -163,4 +191,3 @@
     </div>
   </div>
 </div>
-{% include header.html %}
