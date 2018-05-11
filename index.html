@@ -4,238 +4,163 @@
 <!--
   Copyright (c) 2018 by Delphix. All rights reserved.
 -->
-<html>
-  <head>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-    <!-- Font Awesome -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12812547-12"></script>
-    <script>
-      // Only track production
-      if (document.location.hostname.search("github.com") !== -1) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-12812547-12');
-      }
-    </script>
-    <!-- Delphix CSS -->
-    <link rel="stylesheet" href="/css/delphix.css">
-    <!-- Metadata -->
-    <title>Delphix Open Source</title>
-    <meta property="og:title" content="Delphix Open Source" />
-    <meta property="og:url" content="https://delphix.github.io" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://delphix.github.io/img/splash.jpg" />
-    <meta property="og:description" content="We love open source, and want to share with the world the software we use and create." />
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@delphix">
-    <meta name="twitter:creator" content="@delphix">
-    <meta name="twitter:title" content="Delphix Open Source">
-    <meta name="twitter:description" content="We love open source, and want to share with the world the software we use and create." />
-    <meta name="twitter:image" content="https://delphix.github.io/img/splash.jpg" />
-    <meta name="description" content="We love open source, and want to share with the world the software we use and create. Here you can find solutions to better manage the Delphix platform and integrate it with other software, as well as tools we use internally to build our own software." />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container container-wide">
-        <div class="navbar navbar-expand navbar-dark flex-column flex-md-row dx-navbar">
-          <div class="navbar-brand mr-0 mr-md-2">
-            <a href="http://www.delphix.com">
-              <image src="/img/logo.svg" width=100px height=16px />
-            </a>
-          </div>
-          <div class="navbar-nav-scroll">
-            <ul class="navbar-nav db-navbar-nav flex-row">
-              <li class="nav-item">
-                <a class="nav-link active" href="/">Open Source</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+{% include header.html %}
+<div class="dx-masthead">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-6 mx-auto col-md6 order-md-2">
+        <img class="img-fluid mb-3 mb-md-0" src="/img/splash.jpg">
       </div>
-    </header>
-    <div class="dx-masthead">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-6 mx-auto col-md6 order-md-2">
-            <img class="img-fluid mb-3 mb-md-0" src="/img/splash.jpg">
-          </div>
-          <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
-            <h2>Delphix Open Source</h2>
-            <p>We love open source, and want to share with the world the software we use and create.
-               Here you can find solutions to better manage the Delphix platform and integrate it with other
-               software, as well as tools we use internally to build our own software.</p>
-          </div>
-        </div>
+      <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
+        <h2>Delphix Open Source</h2>
+        <p>We love open source, and want to share with the world the software we use and create.
+           Here you can find solutions to better manage the Delphix platform and integrate it with other
+           software, as well as tools we use internally to build our own software.</p>
       </div>
     </div>
+  </div>
+</div>
 
-  <div class="container dx-main-content">
-    <!-- Navigation tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#featured" role="tab">Featured Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#all" role="tab">All Repositories</a>
-      </li>
-    </ul>
+<div class="container dx-main-content">
+  <!-- Navigation tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#featured" role="tab">Featured Projects</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#all" role="tab">All Repositories</a>
+    </li>
+  </ul>
 
-    <div class="tab-content py-md-4">
-      <!-- Featured repos -->
-      <div class="tab-pane active" id="featured" role="tabpanel">
-        {% for featured in site.featured %}
-          <div id="multi-item-example" class="row pb-md-4 carousel slide carousel-multi-item" data-ride="carousel">
+  <div class="tab-content py-md-4">
+    <!-- Featured repos -->
+    <div class="tab-pane active" id="featured" role="tabpanel">
+      {% for featured in site.featured %}
+        <div id="multi-item-example" class="row pb-md-4 carousel slide carousel-multi-item" data-ride="carousel">
 
-            <div class="col-md-3 order-md-1 text-center text-md-left align-self-start">
-              <h3>{{featured.name}}</h3>
-              <p>{{featured.description}}</p>
+          <div class="col-md-3 order-md-1 text-center text-md-left align-self-start">
+            <h3>{{featured.name}}</h3>
+            <p>{{featured.description}}</p>
 
-              {% assign rows = featured.repos.size | divided_by: 3.0 | ceil %}
+            {% assign rows = featured.repos.size | divided_by: 3.0 | ceil %}
 
-            </div>
+          </div>
 
-            <div class="col-12 col-md-9 order-md-2">
-              <div class="carousel-inner" role="listbox">
-                {% for i in (1..rows) %}
+          <div class="col-12 col-md-9 order-md-2">
+            <div class="carousel-inner" role="listbox">
+              {% for i in (1..rows) %}
 
-                  {% assign offset = forloop.index0 | times: 3 %}
-                  {% assign repo_array = "" | split: ',' %}
+                {% assign offset = forloop.index0 | times: 3 %}
+                {% assign repo_array = "" | split: ',' %}
 
-                  <div class="col-12 carousel-item {% if offset == 0 %}active{% endif %}">
-                    {% for repo in site.github.public_repositories %}
-                      {% if featured.repos contains repo.name %}
-                        {% assign repo_array = repo_array | push: repo %}
-                      {% endif %}
-                    {% endfor %}
-                    <div class="card-deck">
-                    {% for repo in repo_array limit:3 offset:offset %}
-                      <div class="card">
-                        <div class="card-header text-center">
-                            <img src="/img/icons/{{ repo.name }}.png" height=64px onerror="this.onerror=null; this.src='/img/icons/unknown.png';">
-                        </div>
-                        <div class="card-body">
-                          <h4 class="card-title"><a href="{{ repo.html_url }}">{{ repo.name }}</a></h4>
-                          <p class="card-text">{{ repo.description }}</p>
-                        </div>
-                        <div class="card-footer">
-                          <div class="row d-flex align-items-center">
-                            <div class="col-6 text-left">
-                              <i class="fa fa-star" aria-hidden="true"></i> {{ repo.stargazers_count }}
-                              <i class="fa fa-code-fork pl-md-2" aria-hidden="true"></i> {{ repo.forks_count }}
-                            </div>
-                            <div class="col-6 text-right">
-                              {% if repo.language %}
-                                <span class="rounded text-uppercase dx-language small dx-{{ repo.language | downcase | replace: ' ', '-' }}">
-                                  {{ repo.language }}
-                                </span>
-                              {% endif %}
-                            </div>
+                <div class="col-12 carousel-item {% if offset == 0 %}active{% endif %}">
+                  {% for repo in site.github.public_repositories %}
+                    {% if featured.repos contains repo.name %}
+                      {% assign repo_array = repo_array | push: repo %}
+                    {% endif %}
+                  {% endfor %}
+                  <div class="card-deck">
+                  {% for repo in repo_array limit:3 offset:offset %}
+                    <div class="card">
+                      <div class="card-header text-center">
+                          <img src="/img/icons/{{ repo.name }}.png" height=64px onerror="this.onerror=null; this.src='/img/icons/unknown.png';">
+                      </div>
+                      <div class="card-body">
+                        <h4 class="card-title"><a href="{{ repo.html_url }}">{{ repo.name }}</a></h4>
+                        <p class="card-text">{{ repo.description }}</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="row d-flex align-items-center">
+                          <div class="col-6 text-left">
+                            <i class="fa fa-star" aria-hidden="true"></i> {{ repo.stargazers_count }}
+                            <i class="fa fa-code-fork pl-md-2" aria-hidden="true"></i> {{ repo.forks_count }}
+                          </div>
+                          <div class="col-6 text-right">
+                            {% if repo.language %}
+                              <span class="rounded text-uppercase dx-language small dx-{{ repo.language | downcase | replace: ' ', '-' }}">
+                                {{ repo.language }}
+                              </span>
+                            {% endif %}
                           </div>
                         </div>
                       </div>
-                    {% endfor %}
                     </div>
-
+                  {% endfor %}
                   </div>
 
-                {% endfor %}
-              </div>
-              {% if rows > 1 %}
-              <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-              {% endif %}
+                </div>
+
+              {% endfor %}
             </div>
+            {% if rows > 1 %}
+            <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            {% endif %}
           </div>
+        </div>
+      {% endfor %}
+    </div>
+    <!-- All repos -->
+    <div class="tab-pane" id="all" role="tabpanel">
+      <div class="dx-list-header">
+        <div class="d-flex flex-row justify-content-center">
+          <div class="col-md-4 py-md-2">
+            <strong>Delphix Repository</strong>
+          </div>
+          <div class="col-md-5 py-md-2">
+            <strong>Description</strong>
+          </div>
+          <div class="col-md-3 py-md-2 text-right">
+            <strong>Statistics</strong>
+          </div>
+        </div>
+      </div>
+      <div class="dx-list">
+        {% for repo in site.github.public_repositories %}
+          {% unless repo.archived %}
+            <div class="d-flex flex-row justify-content-center">
+              <div class="col-md-4 py-md-2">
+                <a href="{{ repo.html_url }}">{{ repo.name }}</a>
+              </div>
+              <div class="col-md-5 py-md-2">
+                <small>{{ repo.description }}</small>
+              </div>
+              <div class="col-md-3 py-md-2 text-right">
+                {% if repo.language %}
+                  <span class="rounded text-uppercase small dx-language dx-{{ repo.language | downcase | replace: ' ', '-' }}">
+                    {{ repo.language }}
+                  </span>
+                {% endif %}
+                <i class="fa fa-star pl-md-2 " aria-hidden="true"></i> {{ repo.stargazers_count }}
+                <i class="fa fa-code-fork pl-md-2" aria-hidden="true"></i> {{ repo.forks_count }}
+              </div>
+            </div>
+          {% endunless %}
         {% endfor %}
       </div>
-      <!-- All repos -->
-      <div class="tab-pane" id="all" role="tabpanel">
-        <div class="dx-list-header">
-          <div class="d-flex flex-row justify-content-center">
-            <div class="col-md-4 py-md-2">
-              <strong>Delphix Repository</strong>
-            </div>
-            <div class="col-md-5 py-md-2">
-              <strong>Description</strong>
-            </div>
-            <div class="col-md-3 py-md-2 text-right">
-              <strong>Statistics</strong>
-            </div>
-          </div>
-        </div>
-        <div class="dx-list">
-          {% for repo in site.github.public_repositories %}
-            {% unless repo.archived %}
-              <div class="d-flex flex-row justify-content-center">
-                <div class="col-md-4 py-md-2">
-                  <a href="{{ repo.html_url }}">{{ repo.name }}</a>
-                </div>
-                <div class="col-md-5 py-md-2">
-                  <small>{{ repo.description }}</small>
-                </div>
-                <div class="col-md-3 py-md-2 text-right">
-                  {% if repo.language %}
-                    <span class="rounded text-uppercase small dx-language dx-{{ repo.language | downcase | replace: ' ', '-' }}">
-                      {{ repo.language }}
-                    </span>
-                  {% endif %}
-                  <i class="fa fa-star pl-md-2 " aria-hidden="true"></i> {{ repo.stargazers_count }}
-                  <i class="fa fa-code-fork pl-md-2" aria-hidden="true"></i> {{ repo.forks_count }}
-                </div>
-              </div>
-            {% endunless %}
-          {% endfor %}
-        </div>
-      </div>
     </div>
   </div>
+</div>
 
-  <div class="dx-recruiting">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
-          <h2>We're hiring!</h2>
-          <p>
-            We're always looking for passionate, creative, and collaborative individuals to join the
-            Delphix engineering family!
-          </p><p><a href="https://www.delphix.com/company/careers">SEE OPENINGS
-            &nbsp;<i class="fa fa-chevron-right" aria-hidden=true></i></a>
-          </p>
-        </div>
+<div class="dx-recruiting">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
+        <h2>We're hiring!</h2>
+        <p>
+          We're always looking for passionate, creative, and collaborative individuals to join the
+          Delphix engineering family!
+        </p><p><a href="https://www.delphix.com/company/careers">SEE OPENINGS
+          &nbsp;<i class="fa fa-chevron-right" aria-hidden=true></i></a>
+        </p>
       </div>
     </div>
   </div>
-  <footer class="dx-footer">
-    <div class="container container-wide">
-      <div class="row">
-        <div class="col-12 col-md-6 text-center text-md-left">
-          <a href="http://www.delphix.com">
-            <image src="/img/logo.svg" width=100px height=16px />
-          </a>
-          <div class="dx-copyright ">Copyright (c) 2018 by Delphix</div>
-        </div>
-        <div class="col-12 col-md-6">
-          <ul class="dx-social d-flex justify-content-center justify-content-md-end">
-            <li><a href="https://www.facebook.com/DelphixCorp/"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.linkedin.com/company/delphix"><i class="fa fa-linkedin fa-fw" aria-hidden="true"></i></a></li>
-            <li><a href="https://twitter.com/delphix"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-  </body>
-</html>
+</div>
+{% include header.html %}
