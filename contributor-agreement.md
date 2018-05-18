@@ -1,0 +1,147 @@
+---
+layout: plain
+---
+
+All contributors are required to sign the Delphix Contributor agreement prior
+to contributing code to an open source repository. This process is handled
+automatically by [cla-assistant](http://cla-assistant.io). Simply open a pull
+request and a bot will automatically check to see if you have signed the
+latest agreement. If not, you will be prompted to do so as part of the pull
+request process.
+
+---
+
+# Company Contributor License Agreement
+
+In order to clarify the intellectual property license granted with
+Contributions from any person or entity, Delphix Corp. ("Company") must have a
+Contributor License Agreement (“CLA”) on file that has been signed by each
+Contributor, indicating agreement to the license terms below. This license is
+for Your protection as a Contributor as well as the protection of Company and
+its users; it does not change Your rights to use Your own Contributions for
+any other purpose.
+
+This CLA allows either an individual or an entity (the "Corporation") to
+submit Contributions to Company, to authorize Contributions submitted by its
+employees or agents to Company (in the case of a Corporation), and to grant
+copyright and patent licenses thereto.
+
+If You have not already done so, please complete and sign. This can be done
+automatically through the GitHub pull request process, or by scanning and
+emailling a PDF file of this CLA to
+[open-source@delphix.com](mailto:open-source@delphix.com). Please read this
+document carefully before signing and keep a copy for your records.
+
+Name of Individual or Corporation: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+GitHub Username: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+E-Mail: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+You accept and agree to the following terms and conditions for Your present
+and future Contributions submitted to Company. Except for the license granted
+herein to Company and recipients of software distributed by Company, You
+reserve all right, title, and interest in and to Your Contributions.
+
+1. Definitions.
+
+    "You" (or "Your") shall mean you as an individual (if you are signing this CLA
+    on your own behalf) or the Corporation (if the person signing this CLA is
+    acting on behalf of the Corporation) that is making this CLA with Company. For
+    legal entities, the entity making a Contribution and all other entities that
+    control, are controlled by, or are under common control with that entity are
+    considered to be a single Contributor and this CLA shall apply to
+    Contributions by all such entities. For the purposes of this definition,
+    "control" means (i) the power, direct or indirect, to cause the direction or
+    management of such entity, whether by contract or otherwise, or (ii) ownership
+    of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial
+    ownership of such entity.
+
+    "Contribution" shall mean the code, documentation or other original work of
+    authorship, including any modifications or additions to an existing work,
+    that is intentionally submitted by You to Company for inclusion in, or
+    documentation of, any of the products owned or managed by Company (the
+    "Work"). For the purposes of this definition, "submitted" means any form
+    of electronic, verbal, or written communication sent to Company or its
+    representatives, including but not limited to communication on electronic
+    mailing lists, source code control systems, and issue tracking systems
+    that are managed by, or on behalf of, Company for the purpose of
+    discussing and improving the Work, but excluding any communication that is
+    conspicuously marked or otherwise designated in writing by You as "Not a
+    Contribution."
+
+2. Grant of Copyright License. Subject to the terms and conditions of this
+    CLA, You hereby grant to Company and to recipients of software distributed by
+    or on behalf of Company a perpetual, worldwide, non-exclusive, no-charge,
+    royalty-free, irrevocable copyright license to reproduce, prepare derivative
+    works of, publicly display, publicly perform, sublicense, and distribute Your
+    Contributions and such derivative works.
+
+3. Grant of Patent License. Subject to the terms and conditions of this CLA,
+    You hereby grant to Company and to recipients of software distributed by or on
+    behalf of Company a perpetual, worldwide, non-exclusive, no-charge, royalty-
+    free, irrevocable (except as stated in this section) patent license to make,
+    have made, use, offer to sell, sell, import, and otherwise transfer the Work,
+    where such license applies only to those patent claims licensable by You that
+    are necessarily infringed by Your Contribution(s) alone or by combination of
+    Your Contribution(s) with the Work to which such Contribution(s) was
+    submitted. If any person or entity institutes patent litigation against You or
+    any other person or entity (including a cross-claim or counterclaim in a
+    lawsuit) alleging that Your Contribution, or the Work to which You have
+    contributed, constitutes direct or indirect patent infringement, then any
+    patent licenses granted to that person or entity under this CLA for that
+    Contribution or Work shall terminate as of the date such litigation is filed.
+
+4. You represent that You have sufficient rights and are legally entitled to
+    grant the above licenses with respect to each Contribution. If this CLA is
+    being made on behalf of the Corporation, the individual signing this CLA
+    represents that he or she is authorized to do so on behalf of the Corporation
+    to enter into this CLA, and the Corporation represents further that each
+    employee or agent of the Corporation designated by it is authorized to submit
+    Contributions on behalf of the Corporation. If You are making the Contribution
+    as an individual, and if Your present or past employer(s) or other entities
+    for whom you have performed work has rights to intellectual property that You
+    create that includes Your Contributions, You represent that You have received
+    permission to make Contributions on behalf of that employer or such other
+    entity, that Your employer or such other entity has waived such rights for
+    Your Contributions to Company, or that Your employer or such other entity has
+    executed a separate CLA with Company.
+
+5. You represent that each of Your Contributions is Your original creation
+    (see section 8 for submissions that are not Your original creation).
+
+6. Based on the grant of the rights in sections 2 and 3, You acknowledge and
+    agree that we may license Your Contributions under any license, including
+    copyleft, permissive, commercial, or proprietary license.
+
+7. You are not expected to provide support for Your Contributions, except to
+    the extent You desire to provide support. You may provide support for free,
+    for a fee, or not at all. Unless required by applicable law or agreed to in
+    writing, You provide Your Contributions on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including,
+    without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT,
+    MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+
+8. Should You wish to submit work that is not Your original creation, You may
+    submit it to Company separately from any Contribution, identifying the
+    complete details of its source and of any license or other restriction
+    (including, but not limited to, related patents, trademarks, and license
+    agreements) of which You are personally aware, and conspicuously marking the
+    work as "Submitted on behalf of a third-party: [named here]".
+
+9. You agree to notify Company of any facts or circumstances of which You
+    become aware that would make these representations inaccurate in any respect.
+
+10. This CLA and any action related thereto will be governed by the laws of
+    California without regard to application of conflicts of law rules or
+    principles. Exclusive jurisdiction and venue for actions related to this CLA
+    will be a court of competent jurisdiction in San Mateo County, California, and
+    both parties consent to the jurisdiction of such courts with respect to any
+    such actions. If this CLA is modified or updated by Company, Company will
+    notify You of such update(s) on the Company GitHub portal, and you will be
+    asked to agree to the updated terms at the time your next pull request is
+    submitted.
+
+
+Signature: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+Date: \_\_\_\_\_\_\_\_
