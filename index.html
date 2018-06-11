@@ -56,7 +56,10 @@ layout: default
                 {% assign repo_array = "" | split: ',' %}
 
                 <div class="col-12 carousel-item {% if offset == 0 %}active{% endif %}">
-                  {% for repo in site.github.public_repositories %}
+                  {% if featured.name == "Continuous Integration" %}
+                    {% assign repo_array = repo_array | push:  site.data.jenkins %}
+                  {% endif %}
+                  {% for repo in site.data.github %}
                     {% if featured.repos contains repo.name %}
                       {% assign repo_array = repo_array | push: repo %}
                     {% endif %}

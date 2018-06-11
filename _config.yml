@@ -1,7 +1,18 @@
 repository: delphix/delphix.github.io
-url: https://delphix.github.io/
+plugins_dir: ./_plugins
+
+jekyll_get:
+  - data: jenkins
+    json: 'https://api.github.com/repos/jenkinsci/delphix-plugin'
+    cache: false
+  - data: github
+    json: 'https://api.github.com/orgs/delphix/repos'
+    cache: false
 
 featured:
+  - name: "Continuous Integration"
+    description: "Tools for integrating Delphix into your CI/CD Pipeline"
+    repos: ["delphix-plugin"]
   - name: "Automation"
     description: "Tools to help integrate Delphix into your automation toolchain"
     repos: [ "ansible-target-host", "chef", "delphixpy-examples", "puppet"]
