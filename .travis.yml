@@ -1,7 +1,7 @@
 language: ruby
 cache: bundler
 rvm:
- - 2.3.3
+ - 2.5.1
 script:
   - JEKYLL_ENV=production bundle exec jekyll build --destination site
 deploy:
