@@ -1,8 +1,6 @@
 language: ruby
 rvm:
  - 2.3.3
- - jruby
- - rbx-3
 script:
   - JEKYLL_ENV=production bundle exec jekyll build
 deploy:
