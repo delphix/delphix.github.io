@@ -3,10 +3,10 @@ cache: bundler
 rvm:
  - 2.3.3
 script:
-  - JEKYLL_ENV=production bundle exec jekyll build
+  - JEKYLL_ENV=production bundle exec jekyll build --destination site
 deploy:
   provider: pages
-  local-dir: ./_site
+  local-dir: ./site
   target-branch: master
   email: deploy@travis-ci.org
   name: Deployment Bot
