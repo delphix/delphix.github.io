@@ -1,4 +1,5 @@
 repository: delphix/delphix.github.io
+url: https://delphix.github.io/
 plugins_dir: ./_plugins
 
 jekyll_get:
