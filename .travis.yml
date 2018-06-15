@@ -2,6 +2,9 @@ language: ruby
 cache: bundler
 rvm:
  - 2.5.1
+branches:
+  only:
+  - release
 script:
   - JEKYLL_ENV=production bundle exec jekyll build --destination site
 deploy:
@@ -12,6 +15,6 @@ deploy:
   name: Deployment Bot
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  keep-history: false
+  keep-history: true
   on:
     branch: release
