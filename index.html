@@ -121,7 +121,8 @@ layout: default
         </div>
       </div>
       <div class="dx-list">
-        {% for repo in site.github.public_repositories %}
+        {% assign public_repos = site.data.github | sort: 'name' %}
+        {% for repo in public_repos %}
           {% unless repo.archived %}
             <div class="d-flex flex-row justify-content-center">
               <div class="col-md-4 py-md-2">
