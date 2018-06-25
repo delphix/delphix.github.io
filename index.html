@@ -121,27 +121,33 @@ layout: default
         </div>
       </div>
       <div class="dx-list">
-        {% assign public_repos = site.data.github | sort: 'name' %}
-        {% for repo in public_repos %}
+        {% assign public_repos = "" | split: ',' %}
+        {% assign public_repos = public_repos | push:  site.data.jenkins %}
+        {% for repo in site.data.github %}
           {% unless repo.archived %}
-            <div class="d-flex flex-row justify-content-center">
-              <div class="col-md-4 py-md-2">
-                <a href="{{ repo.html_url }}">{{ repo.name }}</a>
-              </div>
-              <div class="col-md-5 py-md-2">
-                <small>{{ repo.description }}</small>
-              </div>
-              <div class="col-md-3 py-md-2 text-right">
-                {% if repo.language %}
-                  <span class="rounded text-uppercase small dx-language dx-{{ repo.language | downcase | replace: ' ', '-' }}">
-                    {{ repo.language }}
-                  </span>
-                {% endif %}
-                <i class="fa fa-star pl-md-2 " aria-hidden="true"></i> {{ repo.stargazers_count }}
-                <i class="fa fa-code-fork pl-md-2" aria-hidden="true"></i> {{ repo.forks_count }}
-              </div>
-            </div>
+            {% assign public_repos = public_repos | push: repo %}
           {% endunless %}
+        {% endfor %}
+
+        {% assign public_repos = public_repos | sort: 'name' %}
+        {% for repo in public_repos %}
+          <div class="d-flex flex-row justify-content-center">
+            <div class="col-md-4 py-md-2">
+              <a href="{{ repo.html_url }}">{{ repo.name }}</a>
+            </div>
+            <div class="col-md-5 py-md-2">
+              <small>{{ repo.description }}</small>
+            </div>
+            <div class="col-md-3 py-md-2 text-right">
+              {% if repo.language %}
+                <span class="rounded text-uppercase small dx-language dx-{{ repo.language | downcase | replace: ' ', '-' }}">
+                  {{ repo.language }}
+                </span>
+              {% endif %}
+              <i class="fa fa-star pl-md-2 " aria-hidden="true"></i> {{ repo.stargazers_count }}
+              <i class="fa fa-code-fork pl-md-2" aria-hidden="true"></i> {{ repo.forks_count }}
+            </div>
+          </div>
         {% endfor %}
       </div>
     </div>
