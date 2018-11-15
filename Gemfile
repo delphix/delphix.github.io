@@ -2,5 +2,6 @@ source 'https://rubygems.org'
 
 gem "jekyll"
 gem "json"
+gem "activesupport"
 gem "hash-joiner"
-#gem "github-pages", group: :jekyll_plugins
+gem "rest-client"
