@@ -2,13 +2,19 @@ repository: delphix/delphix.github.io
 url: https://delphix.github.io/
 plugins_dir: ./_plugins
 
-jekyll_get:
+jekyll_xml:
   - data: jenkins
-    json: 'https://api.github.com/repos/jenkinsci/delphix-plugin'
-    cache: false
+    source: 'https://api.github.com/repos/jenkinsci/delphix-plugin'
+    json: true
+    cache: true
+    auth_user: GITHUB_USER
+    auth_pass: GITHUB_TOKEN
   - data: github
-    json: 'https://api.github.com/orgs/delphix/repos'
-    cache: false
+    source: 'https://api.github.com/orgs/delphix/repos'
+    json: true
+    cache: true
+    auth_user: GITHUB_USER
+    auth_pass: GITHUB_TOKEN
 
 featured:
   - name: "Continuous Integration"
