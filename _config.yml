@@ -25,7 +25,7 @@ featured:
     repos: [ "ansible-target-host", "chef", "delphixpy-examples", "puppet"]
   - name: "Management"
     description: "Tools for managing Delphix deployments."
-    repos: [ "dxtoolkit", "dxanalyze", "infra-readiness" ]
+    repos: [ "dxtoolkit", "dxm-toolkit", "dxanalyze", "infra-readiness" ]
   - name: "Virtualization"
     description: "Tools to help virtualize data and operate VDBs."
     repos: [ "dxhooks" ]
