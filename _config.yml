@@ -10,7 +10,7 @@ jekyll_xml:
     auth_user: GITHUB_USER
     auth_pass: GITHUB_TOKEN
   - data: github
-    source: 'https://api.github.com/orgs/delphix/repos?page=1&per_page=100'
+    source: 'https://api.github.com/orgs/delphix/repos?page=1&per_page=200'
     json: true
     cache: true
     auth_user: GITHUB_USER
@@ -28,7 +28,7 @@ featured:
     repos: [ "dxtoolkit", "dxm-toolkit", "dxanalyze", "infra-readiness" ]
   - name: "Virtualization"
     description: "Tools to help virtualize data and operate VDBs."
-    repos: [ "dxhooks" ]
+    repos: [ "dxhooks", "virtualization-sdk" , "couchbase-plugin"]
   - name: "Masking"
     description: "Tools to help mask data and operate masking deployments."
     repos: [ "masking-initializer" ]
