@@ -15,7 +15,7 @@ jobs:
 
       - uses: actions/setup-ruby@v1
         with:
-          ruby-version: '2.5.1'
+          ruby-version: '2.6'
 
       - run: JEKYLL_ENV=production bundle exec jekyll build --destination site
 
