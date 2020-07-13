@@ -4,7 +4,10 @@ name: Publish
 on:
   push:
     branches:
-      - feature/switch-to-github-actions
+      - release
+
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   preview:
