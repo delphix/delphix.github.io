@@ -1,0 +1,33 @@
+# .github/workflows/release-merge.yaml
+name: Publish
+
+on:
+  push:
+    branches:
+      - release
+
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  preview:
+    name: Publish Site Changes
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+
+      - run: bundle install
+
+      - run: JEKYLL_ENV=production bundle exec jekyll build --destination site
+
+      - name: Publish to Master Branch
+        uses: s0/git-publish-subdir-action@master
+        env:
+          REPO: self
+          BRANCH: master
+          FOLDER: ./site
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
